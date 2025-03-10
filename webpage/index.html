@@ -38,15 +38,21 @@
         }
     </style>
     <script>
-        function checkServiceStatus() {
-            const services = ["Home Assistant", "Open Media Vault", "OpenVPN", "SQUID PROXY", "PRIVOXY", "DOCKER"];
-            let tableContent = "";
-            services.forEach(service => {
-                let status = Math.random() > 0.5 ? "online" : "offline";
-                tableContent += `<tr><td>${service}</td><td class="${status}">${status.toUpperCase()}</td></tr>`;
-            });
-            document.getElementById("serviceStatus").innerHTML = tableContent;
+        async function checkServiceStatus() {
+            try {
+                let response = await fetch("http://192.168.50.53//status.json");
+                let data = await response.json();
+                let tableContent = "";
+                for (let service in data) {
+                    let status = data[service];
+                    tableContent += `<tr><td>${service}</td><td class="${status}">${status.toUpperCase()}</td></tr>`;
+                }
+                document.getElementById("serviceStatus").innerHTML = tableContent;
+            } catch (error) {
+                console.error("Error al obtener el estado:", error);
+            }
         }
+
         window.onload = checkServiceStatus;
     </script>
 </head>
