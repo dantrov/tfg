@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Estado de Servicios</title>
+    <style>
+        table { border-collapse: collapse; width: 60%; margin: 20px auto; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
+        th { background-color: #f2f2f2; }
+        .activo { background-color: #c8e6c9; }
+        .inactivo, .error { background-color: #ffcdd2; }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center;">Estado de Servicios</h1>
+    <table id="statusTable">
+        <tr>
+            <th>Nombre</th>
+            <th>Estado</th>
+            <th>Descripción/Error</th>
+        </tr>
+    </table>
+
+    <script>
+        async function loadStatus() {
+            const response = await fetch('http://localhost:5000/api/status');
+            const data = await response.json();
+            const table = document.getElementById('statusTable');
+
+            data.forEach(service => {
+                const row = document.createElement('tr');
+                row.className = service.estado === 'active' ? 'activo' :
+                                service.estado === 'inactive' ? 'inactivo' : 'error';
+
+                row.innerHTML = `
+                    <td>${service.nombre}</td>
+                    <td>${service.estado}</td>
+                    <td>${service.error}</td>
+                `;
+                table.appendChild(row);
+            });
+        }
+
+        window.onload = loadStatus;
+    </script>
+</body>
+</html>
