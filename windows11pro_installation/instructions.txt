@@ -1,0 +1,6 @@
+Para crear el archivo de instalación desatendida de manera sencilla utilizamos la siguiente página web:
+https://schneegans.de/windows/unattend-generator/
+Aquí seleccionamos que queremos que tenga nuestro sistema operativo e incluso podemos eliminar programas que vienen preinstalados que no son necesarios para el propósito del sistema y pueden afectar el rendimiento de este.
+Para crear una imagen de instalación de Windows 11 Pro de manera desatendida utilizamos el programa Anyburn que nos permite modificar un archivo ISO.
+Link de descarga del Anyburn:
+https://www.anyburn.com/download.php

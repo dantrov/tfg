@@ -1,0 +1,2 @@
+Como este Sistema Operativo es un Windows 11 Pro hay algunas politicas que podemos aplicar para mejorar la seguridad y adoptar comportamientos caracteristicos
+de un Windows Server.
