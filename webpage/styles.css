@@ -1,0 +1,52 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .dashboard-container {
+    max-width: 1000px;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+  }
+  
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .service-card {
+    background-color: #1e1e1e;
+    border-radius: 16px;
+    padding: 1rem;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .service-card img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px #00c2ff;
+  }
+  
