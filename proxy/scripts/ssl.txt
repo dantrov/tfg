@@ -1,0 +1,4 @@
+#Actalizar el sistema
+ sudo apt upgrade -y
+#Para generar los certificados
+sudo apt install -y apt-transport-https ca-certificates curl software-properties-common

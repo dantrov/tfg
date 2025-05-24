@@ -1,0 +1,44 @@
+dantrov@proxyserver:~$ sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
+Leyendo lista de paquetes... Hecho
+Creando árbol de dependencias... Hecho
+Leyendo la información de estado... Hecho
+ca-certificates ya está en su versión más reciente (20240203).
+fijado ca-certificates como instalado manualmente.
+curl ya está en su versión más reciente (8.5.0-2ubuntu10.6).
+fijado curl como instalado manualmente.
+software-properties-common ya está en su versión más reciente (0.99.49.2).
+fijado software-properties-common como instalado manualmente.
+Se instalarán los siguientes paquetes NUEVOS:
+  apt-transport-https
+0 actualizados, 1 nuevos se instalarán, 0 para eliminar y 1 no actualizados.
+Se necesita descargar 3.974 B de archivos.
+Se utilizarán 35,8 kB de espacio de disco adicional después de esta operación.
+Des:1 http://es.archive.ubuntu.com/ubuntu noble/universe amd64 apt-transport-https all 2.7.14build2 [3.974 B]
+Descargados 3.974 B en 0s (16,6 kB/s)
+Seleccionando el paquete apt-transport-https previamente no seleccionado.
+(Leyendo la base de datos ... 86855 ficheros o directorios instalados actualmente.)
+Preparando para desempaquetar .../apt-transport-https_2.7.14build2_all.deb ...
+Desempaquetando apt-transport-https (2.7.14build2) ...
+Configurando apt-transport-https (2.7.14build2) ...
+Scanning processes...
+Scanning candidates...
+Scanning linux images...
+
+Running kernel seems to be up-to-date.
+
+Restarting services...
+
+Service restarts being deferred:
+ /etc/needrestart/restart.d/dbus.service
+ systemctl restart systemd-logind.service
+ systemctl restart unattended-upgrades.service
+
+No containers need to be restarted.
+
+User sessions running outdated binaries:
+ dantrov @ session #1: login[925]
+ dantrov @ session #3: sshd[1233]
+ dantrov @ user manager service: systemd[1168]
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+dantrov@proxyserver:~$
